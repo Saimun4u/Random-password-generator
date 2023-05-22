@@ -16,3 +16,15 @@ def generate_password():
     
     # Shuffle the password generated
     random.shuffle(password)
+
+    password= "".join(password)
+
+    print(password)
+
+# Ask user to generate more passwords
+
+feedback = input("Do you want to generat a password. Type 'y' or 'n'")
+
+if feedback == 'y':
+    generate_password()
+print('See you later!')
