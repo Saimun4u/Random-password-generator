@@ -1,7 +1,7 @@
 import string
 import random
 
-characters = string.ascii_letters + string.digits + "!@#$%^&*()"
+characters = list(string.ascii_letters + string.digits + "!@#$%^&*()")
 
 def generate_password():
     password_length = int(input("How long would you like your password to be? "))
@@ -23,15 +23,15 @@ def generate_password():
 
 # Ask user to generate more passwords
 
-feedback = input("Do you want to generat a password. Type 'y' or 'n'")
+while True:
+  feedback = input("Do you want to generate a password. Type 'y' or 'n': ")
 
-if feedback == 'y':
-    generate_password()
-elif feedback == 'n':
-    print('See you later!')
-    quit()
-else:
-    print("Invalid input, please input y or n")
-    quit()
+  if feedback == 'y':
+      generate_password()
+  elif feedback == 'n':
+      print('See you later!')
+      quit()
+  else:
+      print("Invalid input, please input y or n")
+      quit()
 
-    
