@@ -27,4 +27,11 @@ feedback = input("Do you want to generat a password. Type 'y' or 'n'")
 
 if feedback == 'y':
     generate_password()
-print('See you later!')
+elif feedback == 'n':
+    print('See you later!')
+    quit()
+else:
+    print("Invalid input, please input y or n")
+    quit()
+
+    
